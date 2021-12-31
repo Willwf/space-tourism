@@ -21,23 +21,27 @@ main {
 
   margin-top: 4.8rem;
 
-  h1 {
+  h5 {
     font-family: "Barlow Condensed", serif;
     color: index.$pale-gray;
     font-weight: 400;
     font-size: 1.6rem;
     letter-spacing: 0.27rem;
     text-align: center;
+  }
 
-    span {
-      font-family: "Bellefair", serif;
-      font-size: 8rem;
-      color: index.$white;
-    }
+  h1 {
+    font-family: "Bellefair", serif;
+    color: index.$white;
+    font-weight: 400;
+    font-size: 8rem;
+    line-height: 10rem;
+
+    margin: 1.6rem 0;
   }
 
   p {
-    font-family: "Barlow Condensed", serif;
+    font-family: "Barlow", serif;
     color: index.$pale-gray;
     font-weight: 400;
     font-size: 1.5rem;
@@ -59,5 +63,7 @@ main {
 
     width: 15rem;
     height: 15rem;
+
+    margin-top: 8.1rem;
   }
 }
