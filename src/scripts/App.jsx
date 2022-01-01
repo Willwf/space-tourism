@@ -1,6 +1,13 @@
+import { useState } from "react";
 import "../styles/App.scss";
 
 function App() {
+  const [isActive, setActive] = useState(false);
+
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
+
   return (
     <div id="App">
       <header>
@@ -8,15 +15,19 @@ function App() {
           <img src="./assets/shared/logo.svg" alt="Logo" />
         </a>
         <div className="hamburguerMenu">
-          <a class="icon inactive">
+          <a
+            onClick={handleToggle}
+            className={`icon ${isActive ? "inactive" : ""}`}
+          >
             <img
               src="./assets/shared/icon-hamburger.svg"
               alt="Hamburger Icon"
             />
           </a>
-          <nav className="links active">
-            <a class="icon close">
+          <nav className={`links ${isActive ? "active" : ""}`}>
+            <a className="icon close">
               <img
+                onClick={handleToggle}
                 src="./assets/shared/icon-close.svg"
                 alt="Close Hamburger Menu"
               />

@@ -13,6 +13,10 @@ header {
     opacity: 0.8;
   }
 
+  .homeLogo:active {
+    opacity: 0.4;
+  }
+
   .hamburguerMenu {
     .icon {
       cursor: pointer;
@@ -23,6 +27,10 @@ header {
 
       &:hover {
         opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.4;
       }
     }
 
@@ -72,6 +80,10 @@ header {
 
           &:hover {
             opacity: 0.8;
+          }
+
+          &:active {
+            opacity: 0.4;
           }
         }
       }
@@ -145,6 +157,10 @@ main {
 
     &:hover {
       outline: rgba(255, 255, 255, 0.3) solid 3.5rem;
+    }
+
+    &:active {
+      opacity: 0.4;
     }
   }
 }
