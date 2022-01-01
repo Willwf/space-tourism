@@ -1,12 +1,81 @@
 @use "index";
 
+.App {
+  position: relative;
+}
+
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  .links {
-    display: none;
+  .homeLogo:hover {
+    opacity: 0.8;
+  }
+
+  .hamburguerMenu {
+    .icon {
+      cursor: pointer;
+
+      &.inactive {
+        display: none;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .links {
+      display: none;
+    }
+
+    .links.active {
+      display: flex;
+      flex-direction: column;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      background-color: rgba(255, 255, 255, 0.04);
+      -webkit-backdrop-filter: blur(3rem);
+      backdrop-filter: blur(3rem);
+
+      width: 70vw;
+      height: 100vh;
+
+      transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+      .icon.close {
+        padding: 3.9rem 2.645rem 0 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 6.5rem 0 0 3.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+
+        a {
+          text-decoration: none;
+          font-size: 1.6rem;
+          font-family: "Barlow Condensed", serif;
+          font-weight: 400;
+          line-height: 1.92rem;
+          letter-spacing: 0.27rem;
+          text-transform: uppercase;
+          color: index.$white;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -50,20 +119,32 @@ main {
     text-transform: none;
   }
 
-  button {
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background-color: index.$white;
     border-radius: 50%;
     border: none;
     text-transform: uppercase;
 
     font-family: "Bellefair", serif;
+    color: #000000;
     font-size: 2rem;
     line-height: 2.3rem;
     letter-spacing: 0.125rem;
+    text-decoration: none;
 
     width: 15rem;
     height: 15rem;
 
     margin-top: 8.1rem;
+
+    transition: all 0.2s ease;
+
+    &:hover {
+      outline: rgba(255, 255, 255, 0.3) solid 3.5rem;
+    }
   }
 }
