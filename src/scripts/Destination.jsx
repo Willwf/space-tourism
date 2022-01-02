@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import "../styles/Destination.scss";
 
 function Destination() {
+  const [destinationIndex, setDestinationIndex] = useState(0);
+  const [destinations, setDestinations] = useState("");
   const [name, setName] = useState("");
   const [imgUrl, setImgUrl] = useState("");
   const [description, setDescription] = useState("");
@@ -12,13 +14,23 @@ function Destination() {
     fetch("../data.json")
       .then((response) => response.json())
       .then((data) => {
-        setName(data.destinations[0].name);
-        setImgUrl(data.destinations[0].images.png);
-        setDescription(data.destinations[0].description);
-        setDistance(data.destinations[0].distance);
-        setTravel(data.destinations[0].travel);
+        setDestinations(data.destinations);
+        setName(data.destinations[destinationIndex].name);
+        setImgUrl(data.destinations[destinationIndex].images.png);
+        setDescription(data.destinations[destinationIndex].description);
+        setDistance(data.destinations[destinationIndex].distance);
+        setTravel(data.destinations[destinationIndex].travel);
       });
-  });
+  }, [destinationIndex]);
+
+  function handleToggle(event) {
+    const destinationSelected = event.target.innerText.toLowerCase();
+    destinations.forEach((destination, index) => {
+      if (destination.name.toLowerCase() === destinationSelected) {
+        setDestinationIndex(index);
+      }
+    });
+  }
 
   return (
     <main>
@@ -28,16 +40,16 @@ function Destination() {
       <img src={imgUrl} alt={name} />
       <nav>
         <ul>
-          <li>
+          <li className="active" onClick={handleToggle}>
             <a href="#">Moon</a>
           </li>
-          <li>
+          <li onClick={handleToggle}>
             <a href="#">Mars</a>
           </li>
-          <li>
+          <li onClick={handleToggle}>
             <a href="#">Europa</a>
           </li>
-          <li>
+          <li onClick={handleToggle}>
             <a href="#">Titan</a>
           </li>
         </ul>
