@@ -40,6 +40,28 @@ main {
 
       gap: 2.7rem;
 
+      li {
+        height: 3rem;
+
+        &.active {
+          color: index.$white;
+          border-bottom: 0.3rem solid;
+
+          a {
+            color: index.$white;
+          }
+        }
+      }
+
+      li:hover {
+        color: index.$pale-gray;
+        border-bottom: 0.3rem solid;
+
+        a {
+          color: index.$pale-gray;
+        }
+      }
+
       a {
         font-family: "Barlow Condensed", serif;
         color: index.$pale-gray;

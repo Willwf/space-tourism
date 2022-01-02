@@ -4,6 +4,13 @@ import "../styles/Destination.scss";
 function Destination() {
   const [destinationIndex, setDestinationIndex] = useState(0);
   const [destinations, setDestinations] = useState("");
+  const [destination, setDestination] = useState("moon");
+
+  const [destinationMoon, setDestinationMoon] = useState(true);
+  const [destinationMars, setDestinationMars] = useState(false);
+  const [destinationEuropa, setDestinationEuropa] = useState(false);
+  const [destinationTitan, setDestinationTitan] = useState(false);
+
   const [name, setName] = useState("");
   const [imgUrl, setImgUrl] = useState("");
   const [description, setDescription] = useState("");
@@ -25,12 +32,40 @@ function Destination() {
 
   function handleToggle(event) {
     const destinationSelected = event.target.innerText.toLowerCase();
-    destinations.forEach((destination, index) => {
-      if (destination.name.toLowerCase() === destinationSelected) {
+    destinations.forEach((item, index) => {
+      if (item.name.toLowerCase() === destinationSelected) {
         setDestinationIndex(index);
+        setDestination(item.name.toLowerCase());
       }
     });
   }
+
+  useEffect(() => {
+    if (destination === "moon") {
+      setDestinationMoon(true);
+      setDestinationMars(false);
+      setDestinationEuropa(false);
+      setDestinationTitan(false);
+    }
+    if (destination === "mars") {
+      setDestinationMoon(false);
+      setDestinationMars(true);
+      setDestinationEuropa(false);
+      setDestinationTitan(false);
+    }
+    if (destination === "europa") {
+      setDestinationMoon(false);
+      setDestinationMars(false);
+      setDestinationEuropa(true);
+      setDestinationTitan(false);
+    }
+    if (destination === "titan") {
+      setDestinationMoon(false);
+      setDestinationMars(false);
+      setDestinationEuropa(false);
+      setDestinationTitan(true);
+    }
+  }, [destination]);
 
   return (
     <main>
@@ -40,16 +75,28 @@ function Destination() {
       <img src={imgUrl} alt={name} />
       <nav>
         <ul>
-          <li className="active" onClick={handleToggle}>
+          <li
+            className={destinationMoon ? "active" : ""}
+            onClick={handleToggle}
+          >
             <a href="#">Moon</a>
           </li>
-          <li onClick={handleToggle}>
+          <li
+            className={destinationMars ? "active" : ""}
+            onClick={handleToggle}
+          >
             <a href="#">Mars</a>
           </li>
-          <li onClick={handleToggle}>
+          <li
+            className={destinationEuropa ? "active" : ""}
+            onClick={handleToggle}
+          >
             <a href="#">Europa</a>
           </li>
-          <li onClick={handleToggle}>
+          <li
+            className={destinationTitan ? "active" : ""}
+            onClick={handleToggle}
+          >
             <a href="#">Titan</a>
           </li>
         </ul>
