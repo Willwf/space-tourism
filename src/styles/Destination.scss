@@ -42,6 +42,7 @@ main {
 
       li {
         height: 3rem;
+        cursor: pointer;
 
         &.active {
           color: index.$white;
@@ -50,6 +51,10 @@ main {
           a {
             color: index.$white;
           }
+        }
+
+        &:active {
+          opacity: 0.4;
         }
       }
 

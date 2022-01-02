@@ -79,25 +79,25 @@ function Destination() {
             className={destinationMoon ? "active" : ""}
             onClick={handleToggle}
           >
-            <a href="#">Moon</a>
+            <a>Moon</a>
           </li>
           <li
             className={destinationMars ? "active" : ""}
             onClick={handleToggle}
           >
-            <a href="#">Mars</a>
+            <a>Mars</a>
           </li>
           <li
             className={destinationEuropa ? "active" : ""}
             onClick={handleToggle}
           >
-            <a href="#">Europa</a>
+            <a>Europa</a>
           </li>
           <li
             className={destinationTitan ? "active" : ""}
             onClick={handleToggle}
           >
-            <a href="#">Titan</a>
+            <a>Titan</a>
           </li>
         </ul>
       </nav>
