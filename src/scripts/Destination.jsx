@@ -12,7 +12,8 @@ function Destination() {
   const [destinationTitan, setDestinationTitan] = useState(false);
 
   const [name, setName] = useState("");
-  const [imgUrl, setImgUrl] = useState("");
+  const [imgPngUrl, setImgPngUrl] = useState("");
+  const [imgWebpUrl, setImgWebpUrl] = useState("");
   const [description, setDescription] = useState("");
   const [distance, setDistance] = useState("");
   const [travel, setTravel] = useState("");
@@ -23,7 +24,8 @@ function Destination() {
       .then((data) => {
         setDestinations(data.destinations);
         setName(data.destinations[destinationIndex].name);
-        setImgUrl(data.destinations[destinationIndex].images.png);
+        setImgPngUrl(data.destinations[destinationIndex].images.png);
+        setImgWebpUrl(data.destinations[destinationIndex].images.webp);
         setDescription(data.destinations[destinationIndex].description);
         setDistance(data.destinations[destinationIndex].distance);
         setTravel(data.destinations[destinationIndex].travel);
@@ -72,7 +74,7 @@ function Destination() {
       <h2>
         <span>01</span> Pick Your Destination
       </h2>
-      <img src={imgUrl} alt={name} />
+      <img srcset={`${imgWebpUrl}, ${imgPngUrl}`} alt={name} />
       <nav>
         <ul>
           <li
