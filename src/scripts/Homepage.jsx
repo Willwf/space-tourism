@@ -3,7 +3,7 @@ import "../styles/Homepage.scss";
 function HomePage() {
   return (
     <main>
-      <h5>So, you want to travel to</h5>
+      <h2>So, you want to travel to</h2>
       <h1>Space</h1>
       <p>
         Let's face it; if you want to go to space, you might as well genuinely
