@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "../styles/index.scss";
 import { Header } from "../scripts/Header.jsx";
-import { Crew } from "../scripts/Crew.jsx";
+import { Technology } from "../scripts/Technology.jsx";
 
 ReactDOM.render(
   <React.StrictMode>
     <Header />
-    <Crew />
+    <Technology />
   </React.StrictMode>,
   document.getElementById("root")
 );
