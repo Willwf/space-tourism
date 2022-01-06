@@ -11,6 +11,14 @@ function Crew() {
   const [bio, setBio] = useState("");
 
   useEffect(() => {
+    document.body.classList.add("bg-crew-mobile");
+
+    return () => {
+      document.body.classList.remove("bg-crew-mobile");
+    };
+  });
+
+  useEffect(() => {
     fetch("../data.json")
       .then((response) => response.json())
       .then((data) => {
@@ -27,40 +35,40 @@ function Crew() {
   }
 
   return (
-    <main>
-      <h2>
+    <main className="crew">
+      <h2 className="crew phrase">
         <span>02</span> Meet Your Crew
       </h2>
-      <div className="imgContainer">
+      <div className="crew imgContainer">
         <img srcSet={`${imgWebpUrl}, ${imgPngUrl}`} alt={`${name}'s Picture`} />
       </div>
-      <nav>
+      <nav className="crew selector">
         <ul>
           <li
             data-index="0"
-            className={crewMemberIndex === 0 ? "active" : ""}
+            className={`sliderCircle ${crewMemberIndex === 0 ? "active" : ""}`}
             onClick={handleToggle}
           ></li>
           <li
             data-index="1"
-            className={crewMemberIndex === 1 ? "active" : ""}
+            className={`sliderCircle ${crewMemberIndex === 1 ? "active" : ""}`}
             onClick={handleToggle}
           ></li>
           <li
             data-index="2"
-            className={crewMemberIndex === 2 ? "active" : ""}
+            className={`sliderCircle ${crewMemberIndex === 2 ? "active" : ""}`}
             onClick={handleToggle}
           ></li>
           <li
             data-index="3"
-            className={crewMemberIndex === 3 ? "active" : ""}
+            className={`sliderCircle ${crewMemberIndex === 3 ? "active" : ""}`}
             onClick={handleToggle}
           ></li>
         </ul>
       </nav>
-      <h3>{role}</h3>
-      <h1>{name}</h1>
-      <p>{bio}</p>
+      <h3 className="crew role">{role}</h3>
+      <h1 className="crew memberName">{name}</h1>
+      <p className="crew bio">{bio}</p>
     </main>
   );
 }

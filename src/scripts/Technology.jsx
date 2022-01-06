@@ -10,6 +10,14 @@ function Technology() {
   const [description, setDescription] = useState("");
 
   useEffect(() => {
+    document.body.classList.add("bg-technology-mobile");
+
+    return () => {
+      document.body.classList.remove("bg-technology-mobile");
+    };
+  });
+
+  useEffect(() => {
     fetch("../data.json")
       .then((response) => response.json())
       .then((data) => {
@@ -25,14 +33,14 @@ function Technology() {
   }
 
   return (
-    <main>
-      <h2>
+    <main className="technology">
+      <h2 className="technology phrase">
         <span>03</span> Space Launch 101
       </h2>
-      <div className="imgContainer">
+      <div className="technology imgContainer">
         <img src={imgLandscape} alt={name} />
       </div>
-      <nav>
+      <nav className="technology selector">
         <ul>
           <li
             data-index="0"
@@ -57,9 +65,9 @@ function Technology() {
           </li>
         </ul>
       </nav>
-      <h3>The Terminology...</h3>
-      <h1>{name}</h1>
-      <p>{description}</p>
+      <h3 className="technology term">The Terminology...</h3>
+      <h1 className="technology title">{name}</h1>
+      <p className="technology description">{description}</p>
     </main>
   );
 }

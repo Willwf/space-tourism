@@ -1,14 +1,15 @@
 @use "index";
 
-main {
+.crew {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
 
-  h2 {
+  &.phrase {
     margin-top: 2.4rem;
+    flex-direction: row;
 
     span {
       font-weight: 700;
@@ -26,7 +27,7 @@ main {
     text-align: center;
   }
 
-  .imgContainer {
+  &.imgContainer {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -39,7 +40,7 @@ main {
     }
   }
 
-  nav {
+  &.selector {
     margin-top: 3.2rem;
 
     ul {
@@ -74,7 +75,7 @@ main {
     }
   }
 
-  h3 {
+  &.role {
     font-family: "Bellefair", serif;
     color: index.$pale-gray;
     font-weight: 400;
@@ -87,7 +88,7 @@ main {
     margin-top: 3.2rem;
   }
 
-  h1 {
+  &.memberName {
     font-family: "Bellefair", serif;
     color: index.$white;
     font-weight: 400;
@@ -97,7 +98,7 @@ main {
     margin-top: 0.8rem;
   }
 
-  p {
+  &.bio {
     font-family: "Barlow", serif;
     color: index.$pale-gray;
     font-weight: 400;

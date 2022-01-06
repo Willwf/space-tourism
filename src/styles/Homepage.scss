@@ -1,6 +1,6 @@
 @use "index";
 
-main {
+.homepage {
   display: flex;
   flex-direction: column;
 
@@ -9,18 +9,17 @@ main {
 
   text-transform: uppercase;
 
-  margin-top: 4.8rem;
-
-  h2 {
+  &.phrase {
     font-family: "Barlow Condensed", serif;
     color: index.$pale-gray;
     font-weight: 400;
     font-size: 1.6rem;
     letter-spacing: 0.27rem;
     text-align: center;
+    margin-top: 4.8rem;
   }
 
-  h1 {
+  &.title {
     font-family: "Bellefair", serif;
     color: index.$white;
     font-weight: 400;
@@ -30,7 +29,7 @@ main {
     margin: 1.6rem 0;
   }
 
-  p {
+  &.description {
     font-family: "Barlow", serif;
     color: index.$pale-gray;
     font-weight: 400;
@@ -40,7 +39,7 @@ main {
     text-transform: none;
   }
 
-  a {
+  &.link {
     display: flex;
     align-items: center;
     justify-content: center;

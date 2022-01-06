@@ -69,13 +69,25 @@ function Destination() {
     }
   }, [destination]);
 
+  useEffect(() => {
+    document.body.classList.add("bg-destination-mobile");
+
+    return () => {
+      document.body.classList.remove("bg-destination-mobile");
+    };
+  });
+
   return (
-    <main>
-      <h2>
+    <main className="destination">
+      <h2 className="destination phrase">
         <span>01</span> Pick Your Destination
       </h2>
-      <img srcSet={`${imgWebpUrl}, ${imgPngUrl}`} alt={name} />
-      <nav>
+      <img
+        className="destination image"
+        srcSet={`${imgWebpUrl}, ${imgPngUrl}`}
+        alt={name}
+      />
+      <nav className="destination selector">
         <ul>
           <li
             className={destinationMoon ? "active" : ""}
@@ -103,13 +115,13 @@ function Destination() {
           </li>
         </ul>
       </nav>
-      <h1>{name}</h1>
-      <p>{description}</p>
+      <h1 className="destination title">{name}</h1>
+      <p className="destination description">{description}</p>
       <div className="separationLine"></div>
-      <h3>Avg. Distance</h3>
-      <h4>{distance}</h4>
-      <h3>Est. Travel Time</h3>
-      <h4>{travel}</h4>
+      <h3 className="destination infoTitle">Avg. Distance</h3>
+      <h4 className="destination infoValue">{distance}</h4>
+      <h3 className="destination infoTitle">Est. Travel Time</h3>
+      <h4 className="destination infoValue">{travel}</h4>
     </main>
   );
 }

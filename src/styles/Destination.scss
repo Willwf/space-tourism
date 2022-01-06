@@ -1,14 +1,15 @@
 @use "index";
 
-main {
+.destination {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
 
-  h2 {
+  &.phrase {
     margin-top: 2.4rem;
+    flex-direction: row;
 
     span {
       font-weight: 700;
@@ -26,12 +27,12 @@ main {
     text-align: center;
   }
 
-  img {
+  &.image {
     width: 17rem;
     margin-top: 3.2rem;
   }
 
-  nav {
+  &.selector {
     margin-top: 2.6rem;
 
     ul {
@@ -80,7 +81,7 @@ main {
     }
   }
 
-  h1 {
+  &.title {
     font-family: "Bellefair", serif;
     color: index.$white;
     font-weight: 400;
@@ -90,7 +91,7 @@ main {
     margin-top: 2rem;
   }
 
-  p {
+  &.description {
     font-family: "Barlow", serif;
     color: index.$pale-gray;
     font-weight: 400;
@@ -106,7 +107,7 @@ main {
     margin-top: 3.2rem;
   }
 
-  h3 {
+  &.infoTitle {
     font-family: "Barlow Condensed", serif;
     color: index.$pale-gray;
     font-weight: 400;
@@ -118,7 +119,7 @@ main {
     margin-top: 3.2rem;
   }
 
-  h4 {
+  &.infoValue {
     font-family: "Bellefair", serif;
     color: index.$white;
     font-weight: 400;
