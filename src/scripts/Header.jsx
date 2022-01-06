@@ -1,3 +1,4 @@
+// import { Link } from "react-router-dom";
 import { useState } from "react";
 import "../styles/Header.scss";
 
@@ -10,7 +11,7 @@ function Header() {
 
   return (
     <header>
-      <a href="#home" className="homeLogo">
+      <a href="/" className="homeLogo">
         <img src="./assets/shared/logo.svg" alt="Logo" />
       </a>
       <div className="hamburguerMenu">
@@ -30,16 +31,20 @@ function Header() {
           </a>
           <ul>
             <li>
-              <a href="#home">00 Home</a>
+              <a href="/">00 Home</a>
+              {/* <Link to="/">00 Home</Link> */}
             </li>
             <li>
-              <a href="#destination">01 Destination</a>
+              <a href="destination">01 Destination</a>
+              {/* <Link to="/destination">01 Destination</Link> */}
             </li>
             <li>
-              <a href="#crew">02 Crew</a>
+              <a href="crew">02 Crew</a>
+              {/* <Link to="/crew">02 Crew</Link> */}
             </li>
             <li>
-              <a href="#technology">03 Technology</a>
+              <a href="technology">03 Technology</a>
+              {/* <Link to="/technology">03 Technology</Link> */}
             </li>
           </ul>
         </nav>

@@ -74,7 +74,7 @@ function Destination() {
       <h2>
         <span>01</span> Pick Your Destination
       </h2>
-      <img srcset={`${imgWebpUrl}, ${imgPngUrl}`} alt={name} />
+      <img srcSet={`${imgWebpUrl}, ${imgPngUrl}`} alt={name} />
       <nav>
         <ul>
           <li

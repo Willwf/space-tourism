@@ -14,8 +14,6 @@ function Crew() {
     fetch("../data.json")
       .then((response) => response.json())
       .then((data) => {
-        setCrewMember(data.crew[crewMemberIndex].name.toLowerCase());
-
         setName(data.crew[crewMemberIndex].name);
         setImgPngUrl(data.crew[crewMemberIndex].images.png);
         setImgWebpUrl(data.crew[crewMemberIndex].images.webp);

@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import "../styles/Homepage.scss";
 
-function HomePage() {
+function Homepage() {
   return (
     <main>
       <h2>So, you want to travel to</h2>
@@ -11,9 +12,10 @@ function HomePage() {
         back, and relax because we'll give you a truly out of this world
         experience!
       </p>
-      <a href="#">Explore</a>
+      {/* <a href="#">Explore</a> */}
+      <Link to="/destination">Explore</Link>
     </main>
   );
 }
 
-export { HomePage };
+export { Homepage };
