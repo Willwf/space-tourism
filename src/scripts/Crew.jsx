@@ -11,10 +11,10 @@ function Crew() {
   const [bio, setBio] = useState("");
 
   useEffect(() => {
-    document.body.classList.add("bg-crew-mobile");
+    document.body.classList.add("bg-crew");
 
     return () => {
-      document.body.classList.remove("bg-crew-mobile");
+      document.body.classList.remove("bg-crew");
     };
   });
 

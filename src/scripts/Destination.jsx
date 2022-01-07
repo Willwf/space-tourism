@@ -70,10 +70,10 @@ function Destination() {
   }, [destination]);
 
   useEffect(() => {
-    document.body.classList.add("bg-destination-mobile");
+    document.body.classList.add("bg-destination");
 
     return () => {
-      document.body.classList.remove("bg-destination-mobile");
+      document.body.classList.remove("bg-destination");
     };
   });
 

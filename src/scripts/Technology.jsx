@@ -10,10 +10,10 @@ function Technology() {
   const [description, setDescription] = useState("");
 
   useEffect(() => {
-    document.body.classList.add("bg-technology-mobile");
+    document.body.classList.add("bg-technology");
 
     return () => {
-      document.body.classList.remove("bg-technology-mobile");
+      document.body.classList.remove("bg-technology");
     };
   });
 
