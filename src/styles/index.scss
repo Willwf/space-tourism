@@ -17,14 +17,37 @@ body {
   margin: 2.4rem;
 }
 
-body.bg-destination-mobile {
+body.bg-destination {
   background-image: url("../assets/destination/background-destination-mobile.jpg");
 }
 
-body.bg-crew-mobile {
+body.bg-crew {
   background-image: url("../assets/crew/background-crew-mobile.jpg");
 }
 
-body.bg-technology-mobile {
+body.bg-technology {
   background-image: url("../assets/technology/background-technology-mobile.jpg");
+}
+
+@media (min-width: 768px) {
+  :root {
+    font-size: 100.5%;
+  }
+
+  body {
+    background-image: url("../assets/home/background-home-tablet.jpg");
+    margin: 0;
+  }
+
+  body.bg-destination {
+    background-image: url("../assets/destination/background-destination-tablet.jpg");
+  }
+
+  body.bg-crew {
+    background-image: url("../assets/crew/background-crew-tablet.jpg");
+  }
+
+  body.bg-technology {
+    background-image: url("../assets/technology/background-technology-tablet.jpg");
+  }
 }

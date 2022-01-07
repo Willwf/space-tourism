@@ -30,20 +30,28 @@ function Header() {
             />
           </a>
           <ul>
-            <li>
-              <a href="/">00 Home</a>
+            <li className="active">
+              <a href="/">
+                <span>00 </span>Home
+              </a>
               {/* <Link to="/">00 Home</Link> */}
             </li>
             <li>
-              <a href="destination">01 Destination</a>
+              <a href="destination">
+                <span>01 </span>Destination
+              </a>
               {/* <Link to="/destination">01 Destination</Link> */}
             </li>
             <li>
-              <a href="crew">02 Crew</a>
+              <a href="crew">
+                <span>02 </span>Crew
+              </a>
               {/* <Link to="/crew">02 Crew</Link> */}
             </li>
             <li>
-              <a href="technology">03 Technology</a>
+              <a href="technology">
+                <span>03 </span>Technology
+              </a>
               {/* <Link to="/technology">03 Technology</Link> */}
             </li>
           </ul>
