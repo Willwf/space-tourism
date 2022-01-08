@@ -131,3 +131,62 @@
     margin-top: 1.2rem;
   }
 }
+
+@media (min-width: 768px) {
+  .destination {
+    &.phrase {
+      font-size: 1.25rem;
+      align-self: flex-start;
+
+      span {
+        margin-right: 1.2rem;
+        margin-left: 2.4rem;
+      }
+    }
+
+    &.image {
+      width: 18.7rem;
+    }
+
+    &.selector {
+      ul {
+        gap: 2.2rem;
+
+        li {
+          height: 2rem;
+        }
+
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    &.description {
+      font-size: 1rem;
+      width: 35.6rem;
+      line-height: 1.75rem;
+    }
+
+    .separationLine {
+      width: 35.6rem;
+    }
+
+    &.info {
+      flex-direction: row;
+      width: 35.6rem;
+      justify-content: space-evenly;
+    }
+
+    &.infoTitle {
+      font-size: 0.88rem;
+      margin-top: 1.75rem;
+    }
+
+    &.infoValue {
+      font-size: 1.75rem;
+      line-height: 2rem;
+      margin-top: 0.75rem;
+    }
+  }
+}

@@ -118,10 +118,16 @@ function Destination() {
       <h1 className="destination title">{name}</h1>
       <p className="destination description">{description}</p>
       <div className="separationLine"></div>
-      <h3 className="destination infoTitle">Avg. Distance</h3>
-      <h4 className="destination infoValue">{distance}</h4>
-      <h3 className="destination infoTitle">Est. Travel Time</h3>
-      <h4 className="destination infoValue">{travel}</h4>
+      <div className="destination info">
+        <div className="destination distance">
+          <h3 className="destination infoTitle">Avg. Distance</h3>
+          <h4 className="destination infoValue">{distance}</h4>
+        </div>
+        <div className="destination travelTime">
+          <h3 className="destination infoTitle">Est. Travel Time</h3>
+          <h4 className="destination infoValue">{travel}</h4>
+        </div>
+      </div>
     </main>
   );
 }
