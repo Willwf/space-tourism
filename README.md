@@ -41,7 +41,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://github.com/Willwf/space-tourism/tree/main](https://github.com/Willwf/space-tourism/tree/main)
 <!-- - Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
 
 ## My process
@@ -55,6 +55,7 @@ Users should be able to:
 - Fetch API
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
+- [React Router](https://reactrouter.com/) - Client-side router
 - [Sass](https://sass-lang.com/) - CSS preprocessor
 - [Vite.js](https://vitejs.dev/) - Bundler JS
 

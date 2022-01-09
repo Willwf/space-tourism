@@ -3,13 +3,6 @@ import "../styles/Destination.scss";
 
 function Destination() {
   const [destinationIndex, setDestinationIndex] = useState(0);
-  const [destinations, setDestinations] = useState("");
-  const [destination, setDestination] = useState("moon");
-
-  const [destinationMoon, setDestinationMoon] = useState(true);
-  const [destinationMars, setDestinationMars] = useState(false);
-  const [destinationEuropa, setDestinationEuropa] = useState(false);
-  const [destinationTitan, setDestinationTitan] = useState(false);
 
   const [name, setName] = useState("");
   const [imgPngUrl, setImgPngUrl] = useState("");
@@ -19,10 +12,17 @@ function Destination() {
   const [travel, setTravel] = useState("");
 
   useEffect(() => {
+    document.body.classList.add("bg-destination");
+
+    return () => {
+      document.body.classList.remove("bg-destination");
+    };
+  });
+
+  useEffect(() => {
     fetch("../data.json")
       .then((response) => response.json())
       .then((data) => {
-        setDestinations(data.destinations);
         setName(data.destinations[destinationIndex].name);
         setImgPngUrl(data.destinations[destinationIndex].images.png);
         setImgWebpUrl(data.destinations[destinationIndex].images.webp);
@@ -33,49 +33,8 @@ function Destination() {
   }, [destinationIndex]);
 
   function handleToggle(event) {
-    const destinationSelected = event.target.innerText.toLowerCase();
-    destinations.forEach((item, index) => {
-      if (item.name.toLowerCase() === destinationSelected) {
-        setDestinationIndex(index);
-        setDestination(item.name.toLowerCase());
-      }
-    });
+    setDestinationIndex(Number(event.target.dataset.index));
   }
-
-  useEffect(() => {
-    if (destination === "moon") {
-      setDestinationMoon(true);
-      setDestinationMars(false);
-      setDestinationEuropa(false);
-      setDestinationTitan(false);
-    }
-    if (destination === "mars") {
-      setDestinationMoon(false);
-      setDestinationMars(true);
-      setDestinationEuropa(false);
-      setDestinationTitan(false);
-    }
-    if (destination === "europa") {
-      setDestinationMoon(false);
-      setDestinationMars(false);
-      setDestinationEuropa(true);
-      setDestinationTitan(false);
-    }
-    if (destination === "titan") {
-      setDestinationMoon(false);
-      setDestinationMars(false);
-      setDestinationEuropa(false);
-      setDestinationTitan(true);
-    }
-  }, [destination]);
-
-  useEffect(() => {
-    document.body.classList.add("bg-destination");
-
-    return () => {
-      document.body.classList.remove("bg-destination");
-    };
-  });
 
   return (
     <main className="destination">
@@ -90,25 +49,29 @@ function Destination() {
       <nav className="destination selector">
         <ul>
           <li
-            className={destinationMoon ? "active" : ""}
+            data-index="0"
+            className={destinationIndex === 0 ? "active" : ""}
             onClick={handleToggle}
           >
             <a>Moon</a>
           </li>
           <li
-            className={destinationMars ? "active" : ""}
+            data-index="1"
+            className={destinationIndex === 1 ? "active" : ""}
             onClick={handleToggle}
           >
             <a>Mars</a>
           </li>
           <li
-            className={destinationEuropa ? "active" : ""}
+            data-index="2"
+            className={destinationIndex === 2 ? "active" : ""}
             onClick={handleToggle}
           >
             <a>Europa</a>
           </li>
           <li
-            className={destinationTitan ? "active" : ""}
+            data-index="3"
+            className={destinationIndex === 3 ? "active" : ""}
             onClick={handleToggle}
           >
             <a>Titan</a>
