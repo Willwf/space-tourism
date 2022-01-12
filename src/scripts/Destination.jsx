@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../styles/Destination.scss";
 
-function Destination() {
+function Destination({ setActualPage }) {
   const [destinationIndex, setDestinationIndex] = useState(0);
 
   const [name, setName] = useState("");
@@ -13,6 +13,7 @@ function Destination() {
 
   useEffect(() => {
     document.body.classList.add("bg-destination");
+    setActualPage("destination");
 
     return () => {
       document.body.classList.remove("bg-destination");

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../styles/Crew.scss";
 
-function Crew() {
+function Crew({ setActualPage }) {
   const [crewMemberIndex, setCrewMemberIndex] = useState(0);
 
   const [name, setName] = useState("");
@@ -12,6 +12,7 @@ function Crew() {
 
   useEffect(() => {
     document.body.classList.add("bg-crew");
+    setActualPage("crew");
 
     return () => {
       document.body.classList.remove("bg-crew");

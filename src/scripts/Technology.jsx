@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../styles/Technology.scss";
 
-function Technology() {
+function Technology({ setActualPage }) {
   const [technologyIndex, setTechnologyIndex] = useState(0);
 
   const [name, setName] = useState("");
@@ -11,6 +11,7 @@ function Technology() {
 
   useEffect(() => {
     document.body.classList.add("bg-technology");
+    setActualPage("technology");
 
     return () => {
       document.body.classList.remove("bg-technology");

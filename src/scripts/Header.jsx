@@ -2,10 +2,10 @@
 import { useState } from "react";
 import "../styles/Header.scss";
 
-function Header() {
+function Header({ actualPage }) {
   const [isActive, setActive] = useState(false);
 
-  const handleToggle = () => {
+  const handleMenu = () => {
     setActive(!isActive);
   };
 
@@ -16,7 +16,7 @@ function Header() {
       </a>
       <div className="hamburguerMenu">
         <a
-          onClick={handleToggle}
+          onClick={handleMenu}
           className={`icon ${isActive ? "inactive" : ""}`}
         >
           <img src="./assets/shared/icon-hamburger.svg" alt="Hamburger Icon" />
@@ -24,31 +24,31 @@ function Header() {
         <nav className={`links ${isActive ? "active" : ""}`}>
           <a className="icon close">
             <img
-              onClick={handleToggle}
+              onClick={handleMenu}
               src="./assets/shared/icon-close.svg"
               alt="Close Hamburger Menu"
             />
           </a>
           <ul>
-            <li className="active">
+            <li className={actualPage === "home" ? "active" : ""}>
               <a href="/">
                 <span>00 </span>Home
               </a>
               {/* <Link to="/">00 Home</Link> */}
             </li>
-            <li>
+            <li className={actualPage === "destination" ? "active" : ""}>
               <a href="destination">
                 <span>01 </span>Destination
               </a>
               {/* <Link to="/destination">01 Destination</Link> */}
             </li>
-            <li>
+            <li className={actualPage === "crew" ? "active" : ""}>
               <a href="crew">
                 <span>02 </span>Crew
               </a>
               {/* <Link to="/crew">02 Crew</Link> */}
             </li>
-            <li>
+            <li className={actualPage === "technology" ? "active" : ""}>
               <a href="technology">
                 <span>03 </span>Technology
               </a>
