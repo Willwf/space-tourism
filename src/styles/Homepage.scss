@@ -89,3 +89,33 @@
     }
   }
 }
+
+@media (min-width: 1440px) {
+  .homepage {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .texts {
+      margin-left: 9rem;
+      margin-top: 5rem;
+    }
+
+    &.phrase {
+      font-size: 1.55rem;
+    }
+
+    &.title {
+      font-size: 8.35rem;
+    }
+
+    &.description {
+      text-align: justify;
+      width: 25.3rem;
+    }
+
+    &.link {
+      margin-right: 9rem;
+      margin-top: 20rem;
+    }
+  }
+}
