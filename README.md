@@ -38,6 +38,9 @@ Users should be able to:
 > Tablet Previews
 
 <img src="./screenshots/homepage-tablet.png" height="250">
+<img src="./screenshots/destination-tablet.png" height="250">
+<img src="./screenshots/crew-tablet.png" height="250">
+<img src="./screenshots/technology-tablet.png" height="250">
 
 ### Links
 
@@ -62,7 +65,7 @@ Users should be able to:
 ### What I learned
 
 To build this project I had to use everything that I know and a lot more because it wasn't enough. I learned a lot of things that I didn't know and every time that I've tried to change something or to make it better I had to search and learn something different. It was very challenging but I still think that there are a lot of room for improvement. I spent a lot of time searching for answers and ways to better translate what I was thinking to code and was able to build something acceptable. I still continue to change every little detail that I think could be better executed. The variety of layouts for different screen sizes made me understand so many things about css. It's so rich of functionalities, and I know that there's so much to learn yet.
-I made a mistake about the use of classes and had my first conflict with css across my components. That made me realize things that I had heard or read before, but didn't really comprehend.'
+I made a mistake about the use of classes and had my first conflict with css across my components. That made me realize things that I had heard or read before, but didn't really comprehend.
 
 ### Continued development
 
