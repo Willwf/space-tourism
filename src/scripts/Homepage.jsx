@@ -2,7 +2,11 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Homepage.scss";
 
-function Homepage() {
+function Homepage({ setActualPage }) {
+  useEffect(() => {
+    setActualPage("home");
+  });
+
   return (
     <main className="homepage">
       <h2 className="homepage phrase">So, you want to travel to</h2>

@@ -14,6 +14,7 @@ function Header({ actualPage }) {
       <a href="/" className="homeLogo">
         <img src="./assets/shared/logo.svg" alt="Logo" />
       </a>
+      <div className="line"></div>
       <div className="hamburguerMenu">
         <a
           onClick={handleMenu}

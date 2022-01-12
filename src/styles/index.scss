@@ -51,3 +51,26 @@ body.bg-technology {
     background-image: url("../assets/technology/background-technology-tablet.jpg");
   }
 }
+
+@media (min-width: 1440px) {
+  :root {
+    font-size: 112.5%;
+  }
+
+  body {
+    background-image: url("../assets/home/background-home-desktop.jpg");
+    margin: 0;
+  }
+
+  body.bg-destination {
+    background-image: url("../assets/destination/background-destination-desktop.jpg");
+  }
+
+  body.bg-crew {
+    background-image: url("../assets/crew/background-crew-desktop.jpg");
+  }
+
+  body.bg-technology {
+    background-image: url("../assets/technology/background-technology-desktop.jpg");
+  }
+}

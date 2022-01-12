@@ -149,3 +149,40 @@ header {
     }
   }
 }
+
+@media (min-width: 1440px) {
+  header {
+    margin-top: 2.25rem;
+
+    .homeLogo {
+      margin-left: 3.05rem;
+      position: relative;
+    }
+
+    .line {
+      border-top: 1px solid #383b4b;
+      width: 25.3rem;
+      margin-top: 3.2rem;
+      position: absolute;
+      left: 9rem;
+      top: 2rem;
+    }
+
+    .hamburguerMenu {
+      .links {
+        ul {
+          background: #ffffff05;
+          justify-content: center;
+          gap: 2.67rem;
+
+          a {
+            span {
+              display: inherit;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}

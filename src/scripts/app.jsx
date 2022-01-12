@@ -18,7 +18,10 @@ function App() {
       <Header actualPage={actualPage} />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route
+            path="/"
+            element={<Homepage setActualPage={setActualPage} />}
+          />
           <Route path="crew" element={<Crew setActualPage={setActualPage} />} />
           <Route
             path="technology"
