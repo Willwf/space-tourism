@@ -191,3 +191,61 @@
     }
   }
 }
+
+@media (min-width: 1440px) {
+  .destination {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: end;
+
+    &.phrase {
+      font-size: 1.55rem;
+      margin-top: 4.2rem;
+      justify-content: flex-start;
+
+      span {
+        margin: 0 1.55rem 0 9.25rem;
+      }
+    }
+
+    &.image {
+      width: 24.7rem;
+      margin: 5.4rem 0 0 12.8rem;
+    }
+
+    &.selector {
+      margin-left: 8.72rem;
+    }
+
+    &.title {
+      margin-left: 8.75rem;
+    }
+
+    &.description {
+      margin-left: 8.72rem;
+      width: 24.67rem;
+      text-align: initial;
+    }
+
+    .separationLine {
+      margin-left: 8.72rem;
+      width: 24.67rem;
+    }
+
+    &.info {
+      justify-content: initial;
+      margin-left: 8.72rem;
+    }
+
+    &.distance {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    &.travelTime {
+      align-items: flex-start;
+      flex-direction: column;
+      margin-left: 4.4rem;
+    }
+  }
+}
