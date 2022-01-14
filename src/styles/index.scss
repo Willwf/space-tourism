@@ -52,9 +52,9 @@ body.bg-technology {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   :root {
-    font-size: 112.5%;
+    font-size: 82.5%;
   }
 
   body {
@@ -72,5 +72,17 @@ body.bg-technology {
 
   body.bg-technology {
     background-image: url("../assets/technology/background-technology-desktop.jpg");
+  }
+}
+
+// @media (min-width: 1200px) {
+//   :root {
+//     font-size: 92.5%;
+//   }
+// }
+
+@media (min-width: 1440px) {
+  :root {
+    font-size: 109.5%;
   }
 }

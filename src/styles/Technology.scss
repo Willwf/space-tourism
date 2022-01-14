@@ -145,7 +145,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .technology {
     display: grid;
     align-items: initial;
@@ -205,7 +205,7 @@
       grid-row: 2 / 7;
 
       img {
-        width: 515px;
+        width: 30rem;
         align-self: end;
       }
     }
