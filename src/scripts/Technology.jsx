@@ -38,7 +38,7 @@ function Technology({ setActualPage }) {
       <h2 className="technology phrase">
         <span>03</span> Space Launch 101
       </h2>
-      <div className="technology imgContainer">
+      <div className="technology imgContainer landscape">
         <img src={imgLandscape} alt={name} />
       </div>
       <nav className="technology selector">
@@ -69,6 +69,9 @@ function Technology({ setActualPage }) {
       <h3 className="technology term">The Terminology...</h3>
       <h1 className="technology title">{name}</h1>
       <p className="technology description">{description}</p>
+      <div className="technology imgContainer portrait">
+        <img src={imgPortrait} alt={name} />
+      </div>
     </main>
   );
 }
