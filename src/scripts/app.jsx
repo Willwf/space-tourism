@@ -15,8 +15,8 @@ function App() {
 
   return (
     <>
-      <Header actualPage={actualPage} />
       <BrowserRouter>
+        <Header actualPage={actualPage} />
         <Routes>
           <Route
             path="/"

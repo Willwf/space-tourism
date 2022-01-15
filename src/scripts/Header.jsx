@@ -11,9 +11,9 @@ function Header({ actualPage }) {
 
   return (
     <header>
-      <a href="/" className="homeLogo">
+      <Link to="/" className="homeLogo">
         <img src="./assets/shared/logo.svg" alt="Logo" />
-      </a>
+      </Link>
       <div className="line"></div>
       <div className="hamburguerMenu">
         <a
@@ -32,25 +32,25 @@ function Header({ actualPage }) {
           </a>
           <ul>
             <li className={actualPage === "home" ? "active" : ""}>
-              <Link href="/">
+              <Link to="/">
                 <span>00 </span>Home
               </Link>
               {/* <Link to="/">00 Home</Link> */}
             </li>
             <li className={actualPage === "destination" ? "active" : ""}>
-              <Link href="destination">
+              <Link to="/destination">
                 <span>01 </span>Destination
               </Link>
               {/* <Link to="/destination">01 Destination</Link> */}
             </li>
             <li className={actualPage === "crew" ? "active" : ""}>
-              <Link href="crew">
+              <Link to="/crew">
                 <span>02 </span>Crew
               </Link>
               {/* <Link to="/crew">02 Crew</Link> */}
             </li>
             <li className={actualPage === "technology" ? "active" : ""}>
-              <Link href="technology">
+              <Link to="/technology">
                 <span>03 </span>Technology
               </Link>
               {/* <Link to="/technology">03 Technology</Link> */}
