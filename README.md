@@ -12,7 +12,7 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  <!-- - [Useful resources](#useful-resources) -->
+  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
@@ -42,10 +42,17 @@ Users should be able to:
 <img src="./screenshots/crew-tablet.png" height="250">
 <img src="./screenshots/technology-tablet.png" height="250">
 
+> Desktop Previews
+
+<img src="./screenshots/homepage-desktop.png" height="250">
+<img src="./screenshots/destination-desktop.png" height="250">
+<img src="./screenshots/crew-desktop.png" height="250">
+<img src="./screenshots/technology-desktop.png" height="250">
+
 ### Links
 
 - Solution URL: [https://github.com/Willwf/space-tourism/tree/main](https://github.com/Willwf/space-tourism/tree/main)
-<!-- - Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
+- Live Site URL: [https://space-tourism-khaki.vercel.app/](https://space-tourism-khaki.vercel.app/)
 
 ## My process
 
@@ -55,6 +62,7 @@ Users should be able to:
 - CSS custom properties
 - Media Queries
 - Flexbox
+- Grid
 - Fetch API
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
@@ -65,17 +73,15 @@ Users should be able to:
 ### What I learned
 
 To build this project I had to use everything that I know and a lot more because it wasn't enough. I learned a lot of things that I didn't know and every time that I've tried to change something or to make it better I had to search and learn something different. It was very challenging but I still think that there are a lot of room for improvement. I spent a lot of time searching for answers and ways to better translate what I was thinking to code and was able to build something acceptable. I still continue to change every little detail that I think could be better executed. The variety of layouts for different screen sizes made me understand so many things about css. It's so rich of functionalities, and I know that there's so much to learn yet.
-I made a mistake about the use of classes and had my first conflict with css across my components. That made me realize things that I had heard or read before, but didn't really comprehend.
+I made a mistake about the use of classes and had my first conflict with css across my components. That made me realize things that I had heard or read before, but didn't really comprehend. To work on the desktop layout I had to use Grid to achieve something similar to the figma layout. It took me so much work to get it done and I still have a feeling that it requires improvement.
 
 ### Continued development
 
-I need to keep working with the different hooks on react to fully understand them. And something for my next project is that I want to use styled components just to see the usefulness.
+I need to keep working with the different hooks on react to fully understand them. And something for my next project is that I want to use styled components just to see the usefulness and learn. I've been able to use flexbox in a satisfying way, but I can't say the same about grid layout, so I'm gonna work on that.
 
-<!--
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept. -->
+- [Origamid - Guia CSS Grid Layout](https://www.origamid.com/projetos/css-grid-layout-guia-completo/) - This helped me A LOT to understand the concepts and to implement on css to make it responsive and flexible. This guide saved me so much time. Everything written on it is very detailed.
 
 ## Author
 
