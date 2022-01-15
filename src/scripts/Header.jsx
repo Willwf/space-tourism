@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import "../styles/Header.scss";
 
@@ -32,27 +32,27 @@ function Header({ actualPage }) {
           </a>
           <ul>
             <li className={actualPage === "home" ? "active" : ""}>
-              <a href="/">
+              <Link href="/">
                 <span>00 </span>Home
-              </a>
+              </Link>
               {/* <Link to="/">00 Home</Link> */}
             </li>
             <li className={actualPage === "destination" ? "active" : ""}>
-              <a href="destination">
+              <Link href="destination">
                 <span>01 </span>Destination
-              </a>
+              </Link>
               {/* <Link to="/destination">01 Destination</Link> */}
             </li>
             <li className={actualPage === "crew" ? "active" : ""}>
-              <a href="crew">
+              <Link href="crew">
                 <span>02 </span>Crew
-              </a>
+              </Link>
               {/* <Link to="/crew">02 Crew</Link> */}
             </li>
             <li className={actualPage === "technology" ? "active" : ""}>
-              <a href="technology">
+              <Link href="technology">
                 <span>03 </span>Technology
-              </a>
+              </Link>
               {/* <Link to="/technology">03 Technology</Link> */}
             </li>
           </ul>
