@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/Crew.scss";
+import data from "../../data.json";
 
 function Crew({ setActualPage }) {
   const [crewMemberIndex, setCrewMemberIndex] = useState(0);
@@ -20,15 +21,11 @@ function Crew({ setActualPage }) {
   });
 
   useEffect(() => {
-    fetch("../../data.json")
-      .then((response) => response.json())
-      .then((data) => {
-        setName(data.crew[crewMemberIndex].name);
-        setImgPngUrl(data.crew[crewMemberIndex].images.png);
-        setImgWebpUrl(data.crew[crewMemberIndex].images.webp);
-        setRole(data.crew[crewMemberIndex].role);
-        setBio(data.crew[crewMemberIndex].bio);
-      });
+    setName(data.crew[crewMemberIndex].name);
+    setImgPngUrl(data.crew[crewMemberIndex].images.png);
+    setImgWebpUrl(data.crew[crewMemberIndex].images.webp);
+    setRole(data.crew[crewMemberIndex].role);
+    setBio(data.crew[crewMemberIndex].bio);
   }, [crewMemberIndex]);
 
   function handleToggle(event) {

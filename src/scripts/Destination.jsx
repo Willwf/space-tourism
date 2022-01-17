@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/Destination.scss";
+import data from "../../data.json";
 
 function Destination({ setActualPage }) {
   const [destinationIndex, setDestinationIndex] = useState(0);
@@ -21,16 +22,12 @@ function Destination({ setActualPage }) {
   });
 
   useEffect(() => {
-    fetch("../../data.json")
-      .then((response) => response.json())
-      .then((data) => {
-        setName(data.destinations[destinationIndex].name);
-        setImgPngUrl(data.destinations[destinationIndex].images.png);
-        setImgWebpUrl(data.destinations[destinationIndex].images.webp);
-        setDescription(data.destinations[destinationIndex].description);
-        setDistance(data.destinations[destinationIndex].distance);
-        setTravel(data.destinations[destinationIndex].travel);
-      });
+    setName(data.destinations[destinationIndex].name);
+    setImgPngUrl(data.destinations[destinationIndex].images.png);
+    setImgWebpUrl(data.destinations[destinationIndex].images.webp);
+    setDescription(data.destinations[destinationIndex].description);
+    setDistance(data.destinations[destinationIndex].distance);
+    setTravel(data.destinations[destinationIndex].travel);
   }, [destinationIndex]);
 
   function handleToggle(event) {

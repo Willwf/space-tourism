@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/Technology.scss";
+import data from "../../data.json";
 
 function Technology({ setActualPage }) {
   const [technologyIndex, setTechnologyIndex] = useState(0);
@@ -19,14 +20,10 @@ function Technology({ setActualPage }) {
   });
 
   useEffect(() => {
-    fetch("../../data.json")
-      .then((response) => response.json())
-      .then((data) => {
-        setName(data.technology[technologyIndex].name);
-        setImgPortrait(data.technology[technologyIndex].images.portrait);
-        setImgLandscape(data.technology[technologyIndex].images.landscape);
-        setDescription(data.technology[technologyIndex].description);
-      });
+    setName(data.technology[technologyIndex].name);
+    setImgPortrait(data.technology[technologyIndex].images.portrait);
+    setImgLandscape(data.technology[technologyIndex].images.landscape);
+    setDescription(data.technology[technologyIndex].description);
   }, [technologyIndex]);
 
   function handleToggle(event) {
