@@ -20,7 +20,7 @@ function Crew({ setActualPage }) {
   });
 
   useEffect(() => {
-    fetch("../data.json")
+    fetch("../../data.json")
       .then((response) => response.json())
       .then((data) => {
         setName(data.crew[crewMemberIndex].name);
