@@ -63,7 +63,6 @@ Users should be able to:
 - Media Queries
 - Flexbox
 - Grid
-- Fetch API
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [React Router](https://reactrouter.com/) - Client-side router
